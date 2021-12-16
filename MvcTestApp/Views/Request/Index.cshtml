@@ -4,8 +4,16 @@
 @{
 }
 @model List<Request>
+
+<script src="~/js/jquery-3.5.1.js" asp-append-version="true"></script>
+<script>
+        $(document).ready(function() {
+        $('#RequestTable').DataTable();
+    } );
+</script>
+
 <div>
-    <table>
+    <table id="RequestTable" class="display" style="width:100%">
         <thead>
             <tr>
                 <td> Request Id </td>
@@ -31,7 +39,7 @@
                 </tr>
 
             }
-            
+
         <tbody>
     </table>
 </div>
